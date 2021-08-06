@@ -151,6 +151,9 @@ body {
   padding: 5px 0;
   color: #fff;
 }
+.firstScreen .header ul li :hover {
+  color: #D1A954;
+}
 @media screen and (max-width: 768px) {
   .firstScreen .header ul li {
     font-size: 24px;
