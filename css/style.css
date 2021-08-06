@@ -106,10 +106,16 @@ body {
     top: 0;
     left: 0;
     background: #333333;
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+    -webkit-transition: -webkit-transform 0.3s ease-in;
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
     z-index: 11;
   }
 }
-.firstScreen .header .header__nav .cross {
+.firstScreen .header .cross {
   display: none;
   width: 16px;
   height: 16px;
@@ -117,11 +123,11 @@ body {
   margin: 38px 0 0 246px;
 }
 @media screen and (max-width: 768px) {
-  .firstScreen .header .header__nav .cross {
+  .firstScreen .header .cross {
     display: block;
   }
 }
-.firstScreen .header .header__nav ul {
+.firstScreen .header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,7 +138,7 @@ body {
           justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
-  .firstScreen .header .header__nav ul {
+  .firstScreen .header ul {
     margin-top: 86px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -140,70 +146,70 @@ body {
             flex-direction: column;
   }
 }
-.firstScreen .header .header__nav ul li {
+.firstScreen .header ul li {
   list-style-type: none;
   padding: 5px 0;
   color: #fff;
 }
 @media screen and (max-width: 768px) {
-  .firstScreen .header .header__nav ul li {
+  .firstScreen .header ul li {
     font-size: 24px;
     line-height: 33px;
     letter-spacing: 0.05em;
     margin: 0 0 35px 40px;
   }
 }
-.firstScreen .header .header__nav ul li a {
+.firstScreen .header ul li a {
   text-decoration: none;
   color: #fff;
 }
-.firstScreen .header .header__nav .header__socialMedia {
+.firstScreen .header .header__socialMedia {
   display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: 40px;
 }
 @media screen and (max-width: 768px) {
-  .firstScreen .header .header__nav .header__socialMedia {
+  .firstScreen .header .header__socialMedia {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
-.firstScreen .header .header__nav .header__socialMedia div {
+.firstScreen .header .header__socialMedia div {
   width: 45px;
   height: 45px;
   margin-left: 50px;
   margin-top: 50px;
 }
-.firstScreen .header .header__nav .header__socialMedia .facebook {
+.firstScreen .header .header__socialMedia .facebook {
   background-image: url(../img/menu_facebook.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
-.firstScreen .header .header__nav .header__socialMedia .inst {
+.firstScreen .header .header__socialMedia .inst {
   background-image: url(../img/menu_inst.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
-.firstScreen .header .header__nav .header__socialMedia .youtube {
+.firstScreen .header .header__socialMedia .youtube {
   background-image: url(../img/menu_youtube.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
-.firstScreen .header .header__nav .header__socialMedia .vk {
+.firstScreen .header .header__socialMedia .vk {
   background-image: url(../img/menu_vk.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
-.firstScreen .header .header__tel {
+.firstScreen .header__tel {
   padding-top: 5px;
   border-bottom: 2px solid #D1A954;
   text-decoration: none;
   color: #fff;
 }
 @media screen and (max-width: 992px) {
-  .firstScreen .header .header__tel {
+  .firstScreen .header__tel {
     margin-top: 50px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -211,13 +217,13 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  .firstScreen .header .header__tel {
+  .firstScreen .header__tel {
     margin-top: 0;
     -ms-flex-item-align: end;
         align-self: flex-end;
   }
 }
-.firstScreen .header .icon__menu {
+.firstScreen .icon__menu {
   display: none;
   width: 27px;
   height: 20px;
@@ -225,11 +231,12 @@ body {
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 768px) {
-  .firstScreen .header .icon__menu {
+  .firstScreen .icon__menu {
     display: block;
   }
 }
-.firstScreen .firstScreen__main {
+
+.firstScreen__main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,18 +247,18 @@ body {
   color: #fff;
 }
 @media screen and (max-width: 768px) {
-  .firstScreen .firstScreen__main {
+  .firstScreen__main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
 @media screen and (max-width: 576px) {
-  .firstScreen .firstScreen__main {
+  .firstScreen__main {
     margin-top: 100px;
   }
 }
-.firstScreen .firstScreen__main .firstScreen__left {
+.firstScreen__main .firstScreen__left {
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
   -ms-flex-item-align: center;
@@ -259,7 +266,7 @@ body {
       align-self: center;
 }
 @media screen and (max-width: 992px) {
-  .firstScreen .firstScreen__main .firstScreen__left {
+  .firstScreen__main .firstScreen__left {
     width: 540px;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
@@ -267,11 +274,11 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  .firstScreen .firstScreen__main .firstScreen__left {
+  .firstScreen__main .firstScreen__left {
     width: 540px;
   }
 }
-.firstScreen .firstScreen__main .firstScreen__left .firstScreen__left-title {
+.firstScreen__main .firstScreen__left .firstScreen__left-title {
   font-weight: bold;
   font-size: 64px;
   line-height: 87px;
@@ -279,27 +286,27 @@ body {
   text-transform: uppercase;
 }
 @media screen and (max-width: 768px) {
-  .firstScreen .firstScreen__main .firstScreen__left .firstScreen__left-title {
+  .firstScreen__main .firstScreen__left .firstScreen__left-title {
     text-align: center;
   }
 }
-.firstScreen .firstScreen__main .firstScreen__left .firstScreen__left-text {
+.firstScreen__main .firstScreen__left .firstScreen__left-text {
   margin-top: 20px;
   font-family: Open Sans;
   font-size: 14px;
   line-height: 150%;
 }
 @media screen and (max-width: 992px) {
-  .firstScreen .firstScreen__main .firstScreen__left .firstScreen__left-text {
+  .firstScreen__main .firstScreen__left .firstScreen__left-text {
     margin-top: 50px;
   }
 }
 @media screen and (max-width: 768px) {
-  .firstScreen .firstScreen__main .firstScreen__left .firstScreen__left-text {
+  .firstScreen__main .firstScreen__left .firstScreen__left-text {
     margin: 45px auto 0;
   }
 }
-.firstScreen .firstScreen__main .firstScreen__left .firstScreen__left-button {
+.firstScreen__main .firstScreen__left .firstScreen__left-button {
   margin-top: 30px;
   width: 160px;
   height: 50px;
@@ -311,15 +318,15 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.firstScreen .firstScreen__main .firstScreen__left .firstScreen__left-button:hover {
+.firstScreen__main .firstScreen__left .firstScreen__left-button:hover {
   background-color: #bb9647;
 }
 @media screen and (max-width: 992px) {
-  .firstScreen .firstScreen__main .firstScreen__left .firstScreen__left-button {
+  .firstScreen__main .firstScreen__left .firstScreen__left-button {
     margin-top: 50px;
   }
 }
-.firstScreen .firstScreen__main .firstScreen__right {
+.firstScreen__main .firstScreen__right {
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
   display: -webkit-box;
@@ -334,11 +341,11 @@ body {
           align-items: center;
 }
 @media screen and (max-width: 992px) {
-  .firstScreen .firstScreen__main .firstScreen__right {
+  .firstScreen__main .firstScreen__right {
     display: none;
   }
 }
-.firstScreen .firstScreen__main .firstScreen__right .firstScreen__right-poster {
+.firstScreen__main .firstScreen__right .firstScreen__right-poster {
   width: 350px;
   height: 490px;
   background-image: url(../img/first-screen__poster.png);
@@ -347,7 +354,7 @@ body {
   -webkit-box-shadow: 20px 20px 0px 0px rgba(209, 169, 84, 0.85);
           box-shadow: 20px 20px 0px 0px rgba(209, 169, 84, 0.85);
 }
-.firstScreen .firstScreen__main .firstScreen__right .firstScreen__right-arrows {
+.firstScreen__main .firstScreen__right .firstScreen__right-arrows {
   margin-left: 20px;
   margin-top: 55px;
   width: 370px;
@@ -359,11 +366,11 @@ body {
           justify-content: space-between;
 }
 @media screen and (max-width: 992px) {
-  .firstScreen .firstScreen__main .firstScreen__right .firstScreen__right-arrows {
+  .firstScreen__main .firstScreen__right .firstScreen__right-arrows {
     display: none;
   }
 }
-.firstScreen .firstScreen__main .firstScreen__right .firstScreen__right-arrows .arrow {
+.firstScreen__main .firstScreen__right .firstScreen__right-arrows .arrow {
   width: 108px;
   height: 20px;
   font-size: 18px;
@@ -374,29 +381,34 @@ body {
   transition: transform 0.1s ease-out 0.1s;
   transition: transform 0.1s ease-out 0.1s, -webkit-transform 0.1s ease-out 0.1s;
 }
-.firstScreen .firstScreen__main .firstScreen__right .firstScreen__right-arrows .prew {
+.firstScreen__main .firstScreen__right .firstScreen__right-arrows .prew {
   background: url(../img/Arrow-left.svg) no-repeat;
 }
-.firstScreen .firstScreen__main .firstScreen__right .firstScreen__right-arrows .prew::after {
+.firstScreen__main .firstScreen__right .firstScreen__right-arrows .prew::after {
   content: "ПРЕД";
   margin-left: 65px;
 }
-.firstScreen .firstScreen__main .firstScreen__right .firstScreen__right-arrows .prew:hover {
+.firstScreen__main .firstScreen__right .firstScreen__right-arrows .prew:hover {
   -webkit-transform: translatex(-2px);
           transform: translatex(-2px);
 }
-.firstScreen .firstScreen__main .firstScreen__right .firstScreen__right-arrows .next {
+.firstScreen__main .firstScreen__right .firstScreen__right-arrows .next {
   background: url(../img/Arrow-right.svg) no-repeat;
   background-position: right;
   text-align: center;
 }
-.firstScreen .firstScreen__main .firstScreen__right .firstScreen__right-arrows .next::before {
+.firstScreen__main .firstScreen__right .firstScreen__right-arrows .next::before {
   content: "СЛЕД";
   margin-left: -65px;
 }
-.firstScreen .firstScreen__main .firstScreen__right .firstScreen__right-arrows .next:hover {
+.firstScreen__main .firstScreen__right .firstScreen__right-arrows .next:hover {
   -webkit-transform: translatex(2px);
           transform: translatex(2px);
+}
+
+.header__nav.header__nav--mobile-active {
+  -webkit-transform: translateX(0%) !important;
+          transform: translateX(0%) !important;
 }
 
 .aboutTheater {

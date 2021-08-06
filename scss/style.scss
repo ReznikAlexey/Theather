@@ -83,7 +83,10 @@ body {
                 top: 0;
                 left: 0; 
                 background: #333333;  
+                transform: translateX(-150%);
+		        transition: transform 0.3s ease-in;  
                 z-index: 11;
+                }
             }
             .cross {
                 display: none;
@@ -124,6 +127,7 @@ body {
                 display: none;
                 flex-wrap: wrap;
                 margin-left: 40px;
+                
                 @media screen and (max-width: 768px) {
                     display: flex;
                 }
@@ -306,7 +310,12 @@ body {
             }
         }
     }            
+
+.header__nav.header__nav--mobile-active {
+    transform: translateX(-0%) !important;
 }
+
+ 
 
 .aboutTheater {
     margin-top: 150px;
